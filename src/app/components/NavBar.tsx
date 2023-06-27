@@ -1,74 +1,52 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
+import React from "react";
+import { BsSearch } from "react-icons/bs";
+import { ImCart } from "react-icons/im";
+import { FiMenu } from "react-icons/fi";
+import Link from "next/link";
 
-function NavBar() {
-  const [navbar, setNavbar] = useState(false);
+const Navbar = () => {
   return (
-    <div>
-      <nav className="w-full bg-black fixed top-0 left-0 right-0 z-10">
-        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
-          <div>
-            <div className="flex items-center justify-between py-3 md:py-5 md:block">
-              {/* LOGO */}
-              <Link href="/">
-                <h2 className="text-2xl text-cyan-600 font-bold ">LOGO</h2>
-              </Link>
-              {/* HAMBURGER BUTTON FOR MOBILE */}
-              <div className="md:hidden">
-                <button
-                  className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-                  onClick={() => setNavbar(!navbar)}
-                >
-                  {navbar ? (
-                    <Image src="/close.svg" width={30} height={30} alt="logo" />
-                  ) : (
-                    <Image
-                      src="/hamburger-menu.svg"
-                      width={30}
-                      height={30}
-                      alt="logo"
-                      className="focus:border-none active:border-none"
-                    />
-                  )}
-                </button>
-              </div>
-            </div>
+    <div className="w-full h-20 lg:h-28 border-b-[1px] border-gray-500 text-black lg:text-white bg-white lg:bg-transparent">
+      <div className="max-w-screen-2xl h-full mx-auto px-4 flex items-center justify-between">
+        <h1 className="text-2xl uppercase font-bold">Vandelay Industries</h1>
+        <ul className="hidden lg:inline-flex items-center gap-8 uppercase text-sm font-semibold">
+          <li className="navbarLi">
+            <Link href="/">Home</Link>
+          </li>
+          <li className="navbarLi">
+            <Link href="/Pages">Pages</Link>
+          </li>
+          <li className="navbarLi">
+            <Link href="/Services">Services</Link>
+            </li>
+          <li className="navbarLi">
+          <Link href="/Portfolio">Portfolio</Link>
+          </li>
+          <li className="navbarLi">
+          <Link href="/Blog">Blog</Link>
+          </li>
+          <li className="navbarLi">
+          <Link href="/Shop">Shop</Link>
+          </li>
+        </ul>
+        <div className="hidden lg:inline-flex gap-8 items-center">
+          <BsSearch className="text-xl hover:text-hoverColor" />
+          <div className="relative">
+            <ImCart className="text-xl" />
+            <span className="w-4 h-4 bg-yellow-600 text-white rounded-full absolute left-0 -bottom-2 text-xs flex items-center justify-center">
+              0
+            </span>
           </div>
-          <div>
-            <div
-              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                navbar ? 'p-12 md:p-0 block' : 'hidden'
-              }`}
-            >
-              <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                  <Link href="#about" onClick={() => setNavbar(!navbar)}>
-                    About
-                  </Link>
-                </li>
-                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                  <Link href="#blog" onClick={() => setNavbar(!navbar)}>
-                    Blogs
-                  </Link>
-                </li>
-                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                  <Link href="#contact" onClick={() => setNavbar(!navbar)}>
-                    Contact
-                  </Link>
-                </li>
-                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-                  <Link href="#projects" onClick={() => setNavbar(!navbar)}>
-                    Projects
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <button className="w-48 h-14 bg-white text-black uppercase text-sm font-semibold rounded-md hover:bg-darkRed hover:text-white duration-300">
+          <Link href="/contact">Get in Touch</Link>
+          </button>
         </div>
-      </nav>
+        <div className="inline-flex lg:hidden">
+          <FiMenu className="text-3xl" />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
-export default NavBar;
+export default Navbar;

@@ -1,12 +1,20 @@
 import Image from 'next/image'
-import { homedir } from 'os'
-import { Hero } from './components'
+// import  { Navbar } from './components/Navbar';
+import Banner from "./components/Banner";
+import Navbar from "./components/Navbar";
 
 export default function home () {
     return ( 
     <main className="flex flex-col items-center justify-between">
 
-        <div>
+        <div className="w-full bg-banner-bg bg-center">
+        <div className="w-full bg-black opacity-80 text-white">
+          <Navbar />
+          <Banner />
+        </div>
+      </div>
+
+        {/* <div>
             <section 
             id='about'
             className='text-white h-screen bg-black text-center flex'>
@@ -44,7 +52,7 @@ export default function home () {
                     Hero
                 </h1>
             </section>
-        </div>
+        </div> */}
 
       <div>
         <Image
@@ -68,13 +76,13 @@ export default function home () {
 
         </div>
 
-        <h1 style={{
+        {/* <h1 style={{
             paddingTop: "30vh",
             fontFamily: "monospace",
             fontSize: "2.5rem",
             fontWeight: "bold",
             color: "orange",
             textAlign: "center"
-        }}> welcome to vandelay Industries. where we manufacture fine latex goods</h1>
+        }}> welcome to vandelay Industries. where we manufacture fine latex goods</h1> */}
     </main>)
 }
