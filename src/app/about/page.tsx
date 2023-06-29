@@ -19,8 +19,13 @@ export default function Page() {
             objectFit='cover'/>
 
         </div>
-        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ab iste pariatur ipsum necessitatibus ipsa in nobis dignissimos ad voluptatem deleniti totam autem cum dolorum qui voluptas, dicta dolorem quae!</h1>
-
+            <h1>
+                <p style={{}}>Lorem ipsum dolor sit amet 
+                consectetur adipisicing elit. Sunt ab iste pariatur ipsum
+                necessitatibus ipsa in nobis dignissimos ad voluptatem deleniti 
+                totam autem cum dolorum qui voluptas, dicta dolorem quae!
+                </p>
+            </h1>
         </main>
     </>
 }
