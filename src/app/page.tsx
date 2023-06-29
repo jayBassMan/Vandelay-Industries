@@ -54,7 +54,7 @@ export default function home () {
             </section>
         </div> */}
 
-      <div>
+      <div style={{}}>
         <Image
           src="/vandelay-industries-logo.png"
           alt="vandelay-industries-logo"

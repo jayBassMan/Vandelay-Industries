@@ -14,19 +14,19 @@ const Navbar = () => {
             <Link href="/">Home</Link>
           </li>
           <li className="navbarLi">
-            <Link href="/Pages">Pages</Link>
+            <Link href="/about">about</Link>
           </li>
           <li className="navbarLi">
-            <Link href="/Services">Services</Link>
+            <Link href="/services">Services</Link>
             </li>
           <li className="navbarLi">
-          <Link href="/Portfolio">Portfolio</Link>
+          <Link href="/portfolio">Portfolio</Link>
           </li>
           <li className="navbarLi">
-          <Link href="/Blog">Blog</Link>
+          <Link href="/blog">Blog</Link>
           </li>
           <li className="navbarLi">
-          <Link href="/Shop">Shop</Link>
+          <Link href="/shop">Shop</Link>
           </li>
         </ul>
         <div className="hidden lg:inline-flex gap-8 items-center">
