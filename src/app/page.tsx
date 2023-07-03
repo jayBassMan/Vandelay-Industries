@@ -76,7 +76,7 @@ export default function home() {
           objectFit="cover"
         />
       </div>
-      <div className="text-slate-700 dark:text-slate-500 pt-6 md:p-8 text-center">
+      <div className="list-outside text-slate-700 dark:text-slate-500 pt-6 md:p-8 text-center">
         <h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ab
@@ -87,7 +87,9 @@ export default function home() {
         </h1>
       </div>
 
-      <div className="text-slate-700 dark:text-slate-500 pt-6 md:p-8 text-center">
+
+         <div className="grid grid-cols-3 divide-x bg-white rounded-lg opacity-50 text-slate-700">
+  <div>      <div className="text-black pt-6 md:p-8 text-center">
         <h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ab
@@ -96,9 +98,8 @@ export default function home() {
             dolorem quae!
           </p>
         </h1>
-      </div>
-
-      <div className="text-slate-700 dark:text-blue-300 pt-6 md:p-8 text-center">
+          </div></div>
+  <div> <div className="text-black pt-6 md:p-8 text-center">
         <h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ab
@@ -144,8 +145,8 @@ export default function home() {
             resultant pleasure?"
           </p>
         </h1>
-      </div>
-      <div className="text-slate-700 dark:text-blue-300 pt-6 md:p-8 text-center">
+      </div></div>
+  <div> <div className="text-black pt-6 md:p-8 text-center">
         <h1>
           <p>
             Section 1.10.33 of "de Finibus Bonorum et Malorum", written by
@@ -180,7 +181,12 @@ export default function home() {
             or else he endures pains to avoid worse pains."
           </p>
         </h1>
-      </div>
+      </div></div>
+</div>
+          
+
+     
+     
 
       {/* <h1 style={{
             paddingTop: "30vh",
